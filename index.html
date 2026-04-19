@@ -122,6 +122,62 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
 }
 .monogram-jd-dark{ color:var(--ink) }
 .monogram-sub-dark{ color:var(--light) }
+
+@media (max-width: 768px) {
+  /* NAV */
+  .nav { padding: 1.5rem 2rem; }
+  .nav-links { gap: 1.5rem; }
+
+  /* HOME */
+  .home-content { padding: 0 2rem 2.5rem; }
+
+  .home-eyebrow { font-size: 0.5rem; letter-spacing: 0.28em; }
+
+  .home-name {
+    font-size: clamp(3rem, 12vw, 5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .home-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .foot-left { gap: 2rem; flex-wrap: wrap; }
+  .foot-right { text-align: left; }
+
+  /* ABOUT */
+  .about-inner { padding: 7rem 2rem 4rem; }
+
+  .about-photo-wrap {
+    float: none;
+    margin: 0 0 2rem 0;
+  }
+
+  .about-photo-wrap img,
+  .about-photo-placeholder {
+    width: 160px;
+    height: 220px;
+  }
+
+  .about-hed { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 2rem; }
+
+  .cv-row { grid-template-columns: 90px 1fr; gap: 1rem; }
+
+  /* CONTACT */
+  #contact { padding: 0 2rem; }
+  .contact-inner { padding-top: 6rem; }
+  .contact-hed { font-size: clamp(2rem, 8vw, 3rem); }
+}
+
+@media (max-width: 480px) {
+  .nav-logo { font-size: 1.1rem; }
+  .nav-links { gap: 1rem; }
+  .home-name { font-size: clamp(2.5rem, 11vw, 4rem); }
+  .foot-left { gap: 1.25rem; }
+  .foot-group .foot-val { font-size: 0.65rem; }
+}
 </style>
 </head>
 <body>
