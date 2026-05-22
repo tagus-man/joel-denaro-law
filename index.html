@@ -178,6 +178,55 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
   .foot-left { gap: 1.25rem; }
   .foot-group .foot-val { font-size: 0.65rem; }
 }
+
+/* PRESS */
+#press{background:var(--cream);display:flex;flex-direction:column;height:100vh;overflow-y:auto}
+#press::-webkit-scrollbar{width:2px}
+#press::-webkit-scrollbar-thumb{background:var(--sand)}
+.press-inner{padding:9rem 5rem 6rem;max-width:860px;width:100%;color:var(--ink)}
+.press-item{
+  display:grid;grid-template-columns:140px 1fr;
+  gap:2rem;padding:1.4rem 0;
+  border-bottom:1px solid var(--rule);
+  align-items:baseline;
+}
+.press-item:first-of-type{border-top:1px solid var(--rule)}
+.press-date{
+  font-size:0.63rem;font-weight:400;letter-spacing:0.1em;
+  color:var(--light);padding-top:2px;white-space:nowrap;
+}
+.press-content{}
+.press-outlet{
+  font-size:0.58rem;font-weight:500;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--light);
+  margin-bottom:0.35rem;
+}
+.press-headline{
+  font-family:'Playfair Display',serif;
+  font-size:0.95rem;font-weight:400;
+  color:var(--ink);text-decoration:none;
+  display:block;line-height:1.4;
+  transition:color 0.2s;
+}
+.press-headline:hover{color:var(--mid)}
+.press-more{
+  margin-top:2.5rem;
+  font-size:0.58rem;font-weight:500;letter-spacing:0.28em;
+  text-transform:uppercase;color:var(--light);
+  cursor:pointer;background:none;border:none;
+  padding:0;transition:color 0.2s;
+  display:flex;align-items:center;gap:0.75rem;
+}
+.press-more::before{content:'';display:block;width:2rem;height:1px;background:var(--sand)}
+.press-more:hover{color:var(--ink)}
+.press-hidden{display:none}
+.press-hidden.visible{display:grid}
+
+@media(max-width:768px){
+  .press-inner{padding:7rem 2rem 4rem}
+  .press-item{grid-template-columns:1fr;gap:0.5rem}
+  .press-date{padding-top:0}
+}
 </style>
 </head>
 <body>
@@ -219,6 +268,7 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
       <a class="nav-logo" onclick="show('home')" style="color:var(--ink)">Joel Denaro</a>
       <div class="nav-links">
         <a onclick="show('about')" class="active" style="color:var(--mid)">About</a>
+        <a onclick="show('press')" style="color:var(--light)">Press</a>
         <a onclick="show('contact')" style="color:var(--light)">Contact</a>
       </div>
     </nav>
@@ -259,6 +309,7 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
       <a class="nav-logo" onclick="show('home')" style="color:var(--ink)">Joel Denaro</a>
       <div class="nav-links">
         <a onclick="show('about')" style="color:var(--light)">About</a>
+        <a onclick="show('press')" style="color:var(--light)">Press</a>
         <a onclick="show('contact')" class="active" style="color:var(--mid)">Contact</a>
       </div>
     </nav>
@@ -286,8 +337,351 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
     </div>
   </div>
 
+
+  <!-- PRESS -->
+  <div class="page" id="press">
+    <nav class="nav" style="position:absolute;background:transparent">
+      <a class="nav-logo" onclick="show('home')" style="color:var(--ink);font-style:italic">Joel Denaro</a>
+      <div class="nav-links">
+        <a onclick="show('about')" style="color:var(--light)">About</a>
+        <a onclick="show('press')" class="active" style="color:var(--mid)">Press</a>
+        <a onclick="show('contact')" style="color:var(--light)">Contact</a>
+      </div>
+    </nav>
+    <div class="press-inner">
+      <div class="page-label">In the News</div>
+      <h1 class="about-hed">Press</h1>
+      <div class="press-item">
+        <div class="press-date">April 15, 2026</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article315419177" target="_blank" rel="noopener">Rape charge dropped against Oren Alexander, facing 2 others</a>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">April 14, 2026</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article315404197" target="_blank" rel="noopener">Miami-Dade fatal boat crash trial set to begin in June</a>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">March 18, 2026</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article315100817" target="_blank" rel="noopener">George Pino may claim brain injury in boating crash case</a>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">March 4, 2026</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article314921395" target="_blank" rel="noopener">New York jury hears final pitches in Alexander brothers case</a>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">January 29, 2026</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article314476946" target="_blank" rel="noopener">Miami club facilitated sex trafficking of women to Alexander brothers</a>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">January 16, 2026</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article314310408" target="_blank" rel="noopener">Alexander brothers confront sex-trafficking trial in New York</a>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">January 15, 2026</div>
+        <div class="press-content">
+          <div class="press-outlet">Law & Crime</div>
+          <span class="press-headline" style="cursor:default">From Florida Civil Claims to Federal Prosecution</span>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">January 12, 2026</div>
+        <div class="press-content">
+          <div class="press-outlet">LAMag</div>
+          <span class="press-headline" style="cursor:default">New Discovery Filing Complicates Alexander Brothers Case</span>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">October 21, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article312588980" target="_blank" rel="noopener">Alexander brothers' hearing devolves into name-calling</a>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">September 11, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article312065098" target="_blank" rel="noopener">Key evidence in twin Oren Alexander's rape case</a>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">July 25, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article310795890" target="_blank" rel="noopener">Barreto questions Pino boat crash investigation, emails show</a>
+        </div>
+      </div>
+      <div class="press-item">
+        <div class="press-date">July 8, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article310027805" target="_blank" rel="noopener">Sex crime charge against Alexander brothers' friend dismissed</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">June 12, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Law & Crime</div>
+          <span class="press-headline" style="cursor:default">Alexanders', Fisherman's defense ramps up in sexual battery case</span>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">June 10, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article308202980" target="_blank" rel="noopener">Alexander brothers move to dismiss sex trafficking charges</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">June 10, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">NBC News</div>
+          <a class="press-headline" href="https://www.nbcnews.com/news/us-news/accusations" target="_blank" rel="noopener">More accusations added to federal sex trafficking case against Alexander brothers</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">June 7, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article307964660" target="_blank" rel="noopener">Alexander brothers, friend, seek dismissal of sex crime charges</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">June 6, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article307805325" target="_blank" rel="noopener">FWC chair Barreto, Rundle texted about Pino boat crash case</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">May 9, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article306059746" target="_blank" rel="noopener">Alexander brothers now charged with sex trafficking a minor</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">May 8, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article305979876" target="_blank" rel="noopener">Second body cam video deleted in Pino boat crash investigation</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">April 10, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article303818126" target="_blank" rel="noopener">Alexander brothers' hearing devolves into name-calling</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">April 4, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article303237956" target="_blank" rel="noopener">Alexander brothers say they've been denied evidence</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">March 5, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article301415934" target="_blank" rel="noopener">Judge orders George Pino not to contact Lucy Fernandez's family</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">February 27, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article301068899" target="_blank" rel="noopener">New civil lawsuits against all three Alexander brothers</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">February 20, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article300586984" target="_blank" rel="noopener">Miami new hotbed of rape claims against Alexander brothers</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">February 15, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Tampa Bay Times</div>
+          <span class="press-headline" style="cursor:default">Lawyers accuse Morgan & Morgan of orchestrating rape case against wealthy Florida brothers</span>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">February 14, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article300213249" target="_blank" rel="noopener">Alexander twins accuse Morgan firm of big role in rape case</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">January 22, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article299007735" target="_blank" rel="noopener">Civil rape suit against Alexander brothers tossed in New York</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">January 8, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article298177948" target="_blank" rel="noopener">Alexander brother wasn't flown to NYC, but almost was</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">January 3, 2025</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article297871263" target="_blank" rel="noopener">Miami judge denies bonds for one Alexander twin</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">December 28, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article297605068" target="_blank" rel="noopener">How much the Alexander family is worth</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">December 20, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article297346064" target="_blank" rel="noopener">New victims of Alexander brothers come forward</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">December 19, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article297302294" target="_blank" rel="noopener">Alexander brothers in fed custody for sex-trafficking, rape</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">December 18, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article297249599" target="_blank" rel="noopener">Friend of Alexander brothers charged with sex assault</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">December 13, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article297017174" target="_blank" rel="noopener">Judge rejects $115M bond for one of the Alexander brothers</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">December 13, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Court TV</div>
+          <a class="press-headline" href="https://www.courttv.com/news/miami-judge-approv" target="_blank" rel="noopener">Miami judge approves bail for Alexander twins in state rape case</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">December 12, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article296983994" target="_blank" rel="noopener">Miami judge detains Alexander brothers in alleged rape case</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">December 11, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article296922994" target="_blank" rel="noopener">Alexander brothers arrested by FBI, accused of raping dozens</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">November 21, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article295756189" target="_blank" rel="noopener">Pino smelled of alcohol, bloodshot eyes after crash: FWC cop</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">October 31, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article294626294" target="_blank" rel="noopener">Pino charged with felony in boat crash that kills Lourdes girl</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">September 14, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article292358734" target="_blank" rel="noopener">Blame on both Tyreek Hill and Miami-Dade cop, say legal experts</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">September 7, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article290831204" target="_blank" rel="noopener">Real estate brothers from Miami face sex assault allegations</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">August 20, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article291073005" target="_blank" rel="noopener">More witnesses emerge in deadly Biscayne Bay boat crash</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">August 1, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article290609529" target="_blank" rel="noopener">Parents of Lourdes student killed in boat crash want answers</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">July 29, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">Miami Herald</div>
+          <a class="press-headline" href="https://www.miamiherald.com/local/article290515109" target="_blank" rel="noopener">Pino boat crash — family pushed for action</a>
+        </div>
+      </div>
+      <div class="press-item press-hidden">
+        <div class="press-date">July 1, 2024</div>
+        <div class="press-content">
+          <div class="press-outlet">WSVN</div>
+          <span class="press-headline" style="cursor:default">Prominent Miami real estate broker charged with felony homicide in 2022 deadly boating crash</span>
+        </div>
+      </div>
+      <button class="press-more" id="press-toggle" onclick="togglePress()">View More</button>
+    </div>
+  </div>
+
 </div>
 <script>
+
+function togglePress(){
+  var items = document.querySelectorAll('.press-hidden');
+  var btn = document.getElementById('press-toggle');
+  var open = btn.getAttribute('data-open') === 'true';
+  items.forEach(function(el){ el.classList.toggle('visible', !open); });
+  btn.setAttribute('data-open', !open);
+  btn.textContent = open ? 'View More' : 'View Less';
+}
+
 function show(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById(id).classList.add('active');
