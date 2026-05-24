@@ -284,6 +284,14 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
 @media(max-width:768px){
   .notable-meta{flex-direction:column;gap:0.3rem}
 }
+
+/* Light pages */
+.page-light{background:var(--cream) !important}
+.page-light .nav{background:rgba(247,244,239,0.96);border-bottom:1px solid var(--rule)}
+.page-light .nav-logo-main{color:var(--ink)}
+.page-light .nav-logo-sub{color:var(--light)}
+.page-light .nav-links a{color:var(--light)}
+.page-light .nav-links a:hover,.page-light .nav-links a.active{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -324,8 +332,8 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
   </div>
 
   <!-- ABOUT -->
-  <div class="page page-light" id="about" style="position:relative">
-    <nav class="nav" style="position:sticky">
+  <div class="page page-light" id="about">
+    <nav class="nav" style="position:absolute">
       <a class="nav-logo" onclick="show('home')">
         <span class="nav-logo-main">Joel Denaro</span>
         <span class="nav-logo-sub">Trial Attorney &nbsp;·&nbsp; P.A.</span>
@@ -368,8 +376,8 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
   </div>
 
   <!-- CONTACT -->
-  <div class="page page-light" id="contact" style="position:relative">
-    <nav class="nav" style="position:sticky">
+  <div class="page page-light" id="contact">
+    <nav class="nav" style="position:absolute">
       <a class="nav-logo" onclick="show('home')">
         <span class="nav-logo-main">Joel Denaro</span>
         <span class="nav-logo-sub">Trial Attorney &nbsp;·&nbsp; P.A.</span>
@@ -406,7 +414,7 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
 
 
   <!-- PRESS -->
-  <div class="page page-light" id="press" style="position:relative">
+  <div class="page page-light" id="press">
     <nav class="nav" style="position:absolute;background:transparent">
       <a class="nav-logo" onclick="show('home')">
         <span class="nav-logo-main">Joel Denaro</span>
