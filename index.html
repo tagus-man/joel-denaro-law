@@ -227,6 +227,63 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
   .press-item{grid-template-columns:1fr;gap:0.5rem}
   .press-date{padding-top:0}
 }
+
+.notable-section{margin-top:5rem;padding-top:4rem;border-top:1px solid var(--rule)}
+.notable-label{
+  font-size:0.52rem;font-weight:500;letter-spacing:0.35em;
+  text-transform:uppercase;color:var(--light);
+  margin-bottom:3rem;display:flex;align-items:center;gap:1rem;
+}
+.notable-label::before{content:'';display:block;width:2rem;height:1px;background:var(--sand)}
+.notable-item{
+  padding:2.5rem 0;border-bottom:1px solid var(--rule);
+}
+.notable-item:first-of-type{border-top:1px solid var(--rule)}
+.notable-meta{
+  display:flex;align-items:baseline;gap:2rem;
+  margin-bottom:0.75rem;
+}
+.notable-year{
+  font-size:0.63rem;font-weight:400;letter-spacing:0.1em;
+  color:var(--light);white-space:nowrap;
+}
+.notable-outlet{
+  font-size:0.58rem;font-weight:500;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--light);
+}
+.notable-hed{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;font-weight:400;
+  color:var(--ink);margin-bottom:0.75rem;
+  line-height:1.3;
+}
+.notable-body{
+  font-size:0.83rem;font-weight:300;line-height:1.9;
+  color:var(--mid);max-width:680px;
+}
+.notable-quote{
+  font-family:'Playfair Display',serif;
+  font-size:0.95rem;font-style:italic;
+  color:var(--ink);
+  border-left:2px solid var(--sand);
+  padding-left:1.25rem;
+  margin-top:1rem;
+  line-height:1.6;
+}
+
+/* About caption */
+.about-family-caption{
+  font-size:0.52rem;font-weight:300;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--light);
+  margin-top:3rem;padding-top:2rem;
+  border-top:1px solid var(--rule);
+  font-style:italic;
+  clear:both;
+}
+
+@media(max-width:768px){
+  .notable-meta{flex-direction:column;gap:0.3rem}
+}
 </style>
 </head>
 <body>
@@ -241,6 +298,7 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
       <a class="nav-logo" onclick="show('home')">Joel Denaro</a>
       <div class="nav-links">
         <a onclick="show('about')">About</a>
+        <a onclick="show('press')">Press</a>
         <a onclick="show('contact')">Contact</a>
       </div>
     </nav>
@@ -299,7 +357,7 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
         <div class="cv-row"><div class="cv-key">AV®</div><div><div class="cv-val">AV Preeminent® — Martindale-Hubbell</div><div class="cv-note">Highest peer review rating for legal ability and ethics</div></div></div>
         <div class="cv-row"><div class="cv-key">Member</div><div><div class="cv-val">National Association of Criminal Defense Lawyers</div></div></div>
         <div class="cv-row"><div class="cv-key">Member</div><div><div class="cv-val">Florida Association of Criminal Defense Lawyers</div></div></div>
-      </div>
+            <p class="about-family-caption">Judge Dawn Denaro, Jack Denaro, and Joel Denaro</p>
     </div>
   </div>
 
@@ -667,6 +725,69 @@ body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
         </div>
       </div>
       <button class="press-more" id="press-toggle" onclick="togglePress()">View More</button>
+
+      <div class="notable-section">
+        <div class="notable-label">Notable Cases</div>
+
+        <div class="notable-item">
+          <div class="notable-meta">
+            <span class="notable-year">2024 – Present</span>
+            <span class="notable-outlet">Miami Herald · NBC News · Law &amp; Crime</span>
+          </div>
+          <div class="notable-hed">United States v. Alexander Brothers — Federal Sex Trafficking Defense</div>
+          <p class="notable-body">Joel Denaro represents co-defendant Sean Fishman in the high-profile federal prosecution of Oren and Alon Alexander, Miami luxury real estate developers charged with sex trafficking and rape. The case, one of the most widely covered federal criminal trials in South Florida history, has drawn national media attention from NBC News, the Miami Herald, Court TV, and Law &amp; Crime Network.</p>
+        </div>
+
+        <div class="notable-item">
+          <div class="notable-meta">
+            <span class="notable-year">2022 – Present</span>
+            <span class="notable-outlet">Miami Herald</span>
+          </div>
+          <div class="notable-hed">State v. Pino — Biscayne Bay Vessel Homicide</div>
+          <p class="notable-body">Representing the family of Lucy Fernandez, a 17-year-old Our Lady of Lourdes Academy student killed when George Pino's boat struck a channel marker in Biscayne Bay in 2022. Denaro's work surfacing a critical new witness — a Miami-Dade firefighter who had performed CPR at the scene — directly led prosecutors to upgrade Pino's charges from misdemeanor careless boating to felony vessel homicide. Trial is set for June 2026.</p>
+        </div>
+
+        <div class="notable-item">
+          <div class="notable-meta">
+            <span class="notable-year">c. 2018</span>
+            <span class="notable-outlet">Miami Herald</span>
+          </div>
+          <div class="notable-hed">Scurtis v. Rodriguez — A-Rod Real Estate Dispute</div>
+          <p class="notable-body">Co-counsel for Constantine Scurtis, ex-brother-in-law of baseball star Alex Rodriguez, in a high-profile civil dispute over a billion-dollar real estate venture. Scurtis alleged Rodriguez squeezed him out of profits from a portfolio of approximately 5,000 units managed across dozens of limited liability partnerships formed between 2003 and 2008.</p>
+        </div>
+
+        <div class="notable-item">
+          <div class="notable-meta">
+            <span class="notable-year">c. 2011</span>
+            <span class="notable-outlet">Miami Herald · Florida Supreme Court</span>
+          </div>
+          <div class="notable-hed">Florida v. Caraballo — Death Sentence Overturned</div>
+          <p class="notable-body">Secured a 6-1 Florida Supreme Court ruling overturning the death sentence of Victor Caraballo, convicted in connection with the 2002 South Beach kidnapping, rape, and murder of Ana Maria Angel. The court held that expert psychiatric testimony used in the penalty phase was improperly admitted, ordering a new sentencing hearing.</p>
+          <div class="notable-quote">"The state got a bit greedy in their presentation of the evidence and led the judge down the wrong path. But there are no winners in this case."</div>
+        </div>
+
+        <div class="notable-item">
+          <div class="notable-meta">
+            <span class="notable-year">c. 2010</span>
+            <span class="notable-outlet">Miami Herald · Markus Blog</span>
+          </div>
+          <div class="notable-hed">United States v. Prada — Colombian Cartel Mistrial</div>
+          <p class="notable-body">Co-counsel in the federal prosecution of Hernan Prada, alleged head of a Colombian cocaine trafficking enterprise responsible for hundreds of millions of dollars in annual revenue. When the jury deadlocked, Denaro and co-counsel William Barzee made the audacious move of requesting a non-unanimous majority verdict — a rarely invoked provision. The jury stood 7-5 for acquittal. The prosecution declined, forcing a mistrial.</p>
+          <div class="notable-quote">"Our instinct was right. It would have been spectacular if they had agreed. It was really intense."</div>
+        </div>
+
+        <div class="notable-item">
+          <div class="notable-meta">
+            <span class="notable-year">c. 2009</span>
+            <span class="notable-outlet">Miami Herald · The Ledger</span>
+          </div>
+          <div class="notable-hed">State v. Cronin — Charges Dropped</div>
+          <p class="notable-body">Defended Sean Cronin, a Miami federal prosecutor, against misdemeanor charges of lewd and lascivious exhibition following his arrest at a Miami River bar. Denaro challenged the arrest from the outset, and prosecutors ultimately dropped all charges citing lack of evidence.</p>
+          <div class="notable-quote">"He went swimming in his boxer shorts, for God's sake. He did nothing wrong."</div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 
