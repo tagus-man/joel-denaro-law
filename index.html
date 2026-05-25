@@ -122,8 +122,11 @@ nav a{font-size:0.58rem;font-weight:400;letter-spacing:0.25em;text-transform:upp
 
 /* MOBILE */
 @media(max-width:768px){
-  nav{padding:1.5rem 2rem !important}
-  nav div{gap:1.5rem !important}
+  nav{padding:1.25rem 1.5rem !important;flex-wrap:nowrap;gap:0.75rem !important}
+  nav div{gap:1.25rem !important}
+  nav > a span:first-child{font-size:1rem !important}
+  nav > a span:last-child{font-size:0.38rem !important;letter-spacing:0.2em !important}
+  nav div a{font-size:0.5rem !important;letter-spacing:0.18em !important}
   .home-content{padding:0 2rem 2.5rem}
   .home-name{font-size:clamp(3rem,12vw,5rem);margin-bottom:1.5rem}
   .home-foot{flex-direction:column;align-items:flex-start;gap:1rem}
