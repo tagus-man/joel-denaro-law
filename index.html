@@ -647,24 +647,28 @@ nav a{font-size:0.58rem;font-weight:400;letter-spacing:0.25em;text-transform:upp
   <div class="contact-inner">
     <h2 class="contact-hed">Get in touch.</h2>
     <div class="contact-sub">All inquiries handled in strict confidence</div>
-    <div class="f-row"><label class="f-lbl">Name</label><input class="f-inp" type="text" placeholder="Your full name"></div>
-    <div class="f-row"><label class="f-lbl">Phone</label><input class="f-inp" type="tel" placeholder="(305) 000-0000"></div>
-    <div class="f-row">
-      <label class="f-lbl">Nature of Matter</label>
-      <select class="f-sel">
-        <option value="" disabled selected>Select</option>
-        <option>DUI / Traffic</option>
-        <option>Drug Charges</option>
-        <option>Violent Crime</option>
-        <option>White Collar / Fraud</option>
-        <option>Federal</option>
-        <option>Appeal / Post-Conviction</option>
-        <option>Other</option>
-      </select>
-    </div>
-    <div class="f-row"><label class="f-lbl">Brief Description</label><textarea class="f-ta" placeholder="A few words about your situation..."></textarea></div>
-    <button class="f-btn">Send</button>
-    <div class="f-note">Confidential · No obligation</div>
+    <form action="https://formspree.io/f/xeeyqzbw" method="POST" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="_subject" value="New inquiry — Joel Denaro, P.A.">
+      <div class="f-row"><label class="f-lbl">Name</label><input class="f-inp" type="text" name="name" placeholder="Your full name" required></div>
+      <div class="f-row"><label class="f-lbl">Phone</label><input class="f-inp" type="tel" name="phone" placeholder="(305) 000-0000"></div>
+      <div class="f-row">
+        <label class="f-lbl">Nature of Matter</label>
+        <select class="f-sel" name="matter">
+          <option value="" disabled selected>Select</option>
+          <option>DUI / Traffic</option>
+          <option>Drug Charges</option>
+          <option>Violent Crime</option>
+          <option>White Collar / Fraud</option>
+          <option>Federal</option>
+          <option>Appeal / Post-Conviction</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="f-row"><label class="f-lbl">Brief Description</label><textarea class="f-ta" name="message" placeholder="A few words about your situation..."></textarea></div>
+      <button class="f-btn" type="submit">Send</button>
+      <div class="f-note">Confidential · No obligation</div>
+      <div id="form-success" style="display:none;margin-top:1.5rem;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid)">Message received — we'll be in touch.</div>
+    </form>
   </div>
 </div>
 
@@ -1139,24 +1143,29 @@ nav a{font-size:0.58rem;font-weight:400;letter-spacing:0.25em;text-transform:upp
   <div class="contact-inner">
     <h2 class="contact-hed">Contáctenos.</h2>
     <div class="contact-sub">Toda consulta se maneja con estricta confidencialidad</div>
-    <div class="f-row"><label class="f-lbl">Nombre</label><input class="f-inp" type="text" placeholder="Su nombre completo"></div>
-    <div class="f-row"><label class="f-lbl">Teléfono</label><input class="f-inp" type="tel" placeholder="(305) 000-0000"></div>
-    <div class="f-row">
-      <label class="f-lbl">Naturaleza del Asunto</label>
-      <select class="f-sel">
-        <option value="" disabled selected>Seleccione</option>
-        <option>DUI / Infracción de Tránsito</option>
-        <option>Cargos por Drogas</option>
-        <option>Delitos Violentos</option>
-        <option>Delitos de Cuello Blanco / Fraude</option>
-        <option>Delitos Federales</option>
-        <option>Apelación / Post-Condena</option>
-        <option>Otro</option>
-      </select>
-    </div>
-    <div class="f-row"><label class="f-lbl">Descripción Breve</label><textarea class="f-ta" placeholder="Cuéntenos brevemente su situación..."></textarea></div>
-    <button class="f-btn">Enviar</button>
-    <div class="f-note">Confidencial · Sin compromiso</div>
+    <form action="https://formspree.io/f/xeeyqzbw" method="POST" onsubmit="handleSubmitEs(event)">
+      <input type="hidden" name="_subject" value="Nueva consulta — Joel Denaro, P.A.">
+      <input type="hidden" name="_language" value="es">
+      <div class="f-row"><label class="f-lbl">Nombre</label><input class="f-inp" type="text" name="name" placeholder="Su nombre completo" required></div>
+      <div class="f-row"><label class="f-lbl">Teléfono</label><input class="f-inp" type="tel" name="phone" placeholder="(305) 000-0000"></div>
+      <div class="f-row">
+        <label class="f-lbl">Naturaleza del Asunto</label>
+        <select class="f-sel" name="matter">
+          <option value="" disabled selected>Seleccione</option>
+          <option>DUI / Infracción de Tránsito</option>
+          <option>Cargos por Drogas</option>
+          <option>Delitos Violentos</option>
+          <option>Delitos de Cuello Blanco / Fraude</option>
+          <option>Delitos Federales</option>
+          <option>Apelación / Post-Condena</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="f-row"><label class="f-lbl">Descripción Breve</label><textarea class="f-ta" name="message" placeholder="Cuéntenos brevemente su situación..."></textarea></div>
+      <button class="f-btn" type="submit">Enviar</button>
+      <div class="f-note">Confidencial · Sin compromiso</div>
+      <div id="form-success-es" style="display:none;margin-top:1.5rem;font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid)">Mensaje recibido — nos pondremos en contacto.</div>
+    </form>
   </div>
 </div>
 
@@ -1182,6 +1191,58 @@ nav a{font-size:0.58rem;font-weight:400;letter-spacing:0.25em;text-transform:upp
 
 <script>
 var currentLang = 'en';
+
+async function handleSubmit(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = form.querySelector('.f-btn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    var res = await fetch('https://formspree.io/f/xeeyqzbw', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.reset();
+      document.getElementById('form-success').style.display = 'block';
+      btn.textContent = 'Sent';
+    } else {
+      btn.textContent = 'Send';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Send';
+    btn.disabled = false;
+  }
+}
+
+async function handleSubmitEs(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = form.querySelector('.f-btn');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+  try {
+    var res = await fetch('https://formspree.io/f/xeeyqzbw', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.reset();
+      document.getElementById('form-success-es').style.display = 'block';
+      btn.textContent = 'Enviado';
+    } else {
+      btn.textContent = 'Enviar';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Enviar';
+    btn.disabled = false;
+  }
+}
 var currentPage = 'home';
 
 function show(id) {
