@@ -647,7 +647,7 @@ nav a{font-size:0.58rem;font-weight:400;letter-spacing:0.25em;text-transform:upp
   <div class="contact-inner">
     <h2 class="contact-hed">Get in touch.</h2>
     <div class="contact-sub">All inquiries handled in strict confidence</div>
-    <form action="https://formspree.io/f/xeeyqzbw" method="POST" onsubmit="handleSubmit(event)">
+    <form action="https://formspree.io/f/mnjeqzkv" method="POST" onsubmit="handleSubmit(event)">
       <input type="hidden" name="_subject" value="New inquiry — Joel Denaro, P.A.">
       <div class="f-row"><label class="f-lbl">Name</label><input class="f-inp" type="text" name="name" placeholder="Your full name" required></div>
       <div class="f-row"><label class="f-lbl">Phone</label><input class="f-inp" type="tel" name="phone" placeholder="(305) 000-0000"></div>
@@ -1143,7 +1143,7 @@ nav a{font-size:0.58rem;font-weight:400;letter-spacing:0.25em;text-transform:upp
   <div class="contact-inner">
     <h2 class="contact-hed">Contáctenos.</h2>
     <div class="contact-sub">Toda consulta se maneja con estricta confidencialidad</div>
-    <form action="https://formspree.io/f/xeeyqzbw" method="POST" onsubmit="handleSubmitEs(event)">
+    <form action="https://formspree.io/f/mnjeqzkv" method="POST" onsubmit="handleSubmitEs(event)">
       <input type="hidden" name="_subject" value="Nueva consulta — Joel Denaro, P.A.">
       <input type="hidden" name="_language" value="es">
       <div class="f-row"><label class="f-lbl">Nombre</label><input class="f-inp" type="text" name="name" placeholder="Su nombre completo" required></div>
@@ -1199,7 +1199,7 @@ async function handleSubmit(e) {
   btn.textContent = 'Sending...';
   btn.disabled = true;
   try {
-    var res = await fetch('https://formspree.io/f/xeeyqzbw', {
+    var res = await fetch('https://formspree.io/f/mnjeqzkv', {
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
@@ -1225,7 +1225,7 @@ async function handleSubmitEs(e) {
   btn.textContent = 'Enviando...';
   btn.disabled = true;
   try {
-    var res = await fetch('https://formspree.io/f/xeeyqzbw', {
+    var res = await fetch('https://formspree.io/f/mnjeqzkv', {
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
