@@ -14,7 +14,7 @@
 html,body{height:100%;overflow:hidden}
 body{font-family:'Archivo',sans-serif;background:var(--ink);color:var(--cream)}
 .site{width:100%;height:100vh;position:relative}
-.page{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity 0.7s ease;overflow:hidden}
+.page{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity 0.7s ease}
 .page.active{opacity:1;pointer-events:all}
 nav a{font-size:0.65rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:color 0.2s}
 
@@ -39,12 +39,12 @@ nav a{font-size:0.65rem;font-weight:400;letter-spacing:0.22em;text-transform:upp
 .foot-right a:hover{color:rgba(245,242,236,0.7)}
 
 /* LIGHT PAGES */
-#about,#press,#contact,#about-es,#press-es,#contact-es{background:var(--cream);color:var(--ink);overflow-y:auto}
+#about,#press,#contact,#about-es,#press-es,#contact-es{background:var(--cream);color:var(--ink);overflow-y:auto;-webkit-overflow-scrolling:touch}
 #about::-webkit-scrollbar,#press::-webkit-scrollbar,#about-es::-webkit-scrollbar,#press-es::-webkit-scrollbar{width:2px}
 #about::-webkit-scrollbar-thumb,#press::-webkit-scrollbar-thumb,#about-es::-webkit-scrollbar-thumb,#press-es::-webkit-scrollbar-thumb{background:var(--sand)}
 
 /* ABOUT */
-.about-inner{padding:8rem 4rem 6rem;max-width:920px;width:100%}
+.about-inner{padding:8rem 4rem 8rem;max-width:920px;width:100%}
 .about-photo{width:220px;height:300px;object-fit:cover;object-position:center top;display:block;float:right;margin:0 0 2rem 3rem}
 .page-label{font-size:0.52rem;font-weight:600;letter-spacing:0.35em;text-transform:uppercase;color:var(--light);margin-bottom:2.5rem;display:flex;align-items:center;gap:1rem}
 .page-label::before{content:'';display:block;width:2rem;height:1px;background:var(--sand)}
@@ -70,7 +70,7 @@ nav a{font-size:0.65rem;font-weight:400;letter-spacing:0.22em;text-transform:upp
 .gallery-cap{font-size:0.44rem;font-weight:300;letter-spacing:0.18em;text-transform:uppercase;color:var(--light);margin-top:0.5rem}
 
 /* PRESS */
-.press-inner{padding:8rem 4rem 6rem;max-width:860px;width:100%}
+.press-inner{padding:8rem 4rem 8rem;max-width:860px;width:100%}
 .press-row{display:grid;grid-template-columns:140px 1fr;gap:2rem;padding:1.4rem 0;border-bottom:1px solid var(--rule)}
 .press-row:first-of-type{border-top:1px solid var(--rule)}
 .press-date{font-size:0.68rem;font-weight:400;letter-spacing:0.08em;color:var(--light);padding-top:2px}
@@ -236,7 +236,7 @@ a.press-headline:hover{color:var(--mid)}
       </div>
     </div>
 
-    
+</div>
 
 <!-- EN: PRESS -->
 <div class="page" id="press">
