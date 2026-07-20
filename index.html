@@ -923,15 +923,21 @@ var currentPage = 'home';
 
 function show(id) {
   document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-  document.getElementById(id).classList.add('active');
+  var el = document.getElementById(id);
+  el.classList.add('active');
   currentPage = id;
   var footer = document.getElementById('site-footer');
+  var lightPages = ['about','press','contact','about-es','press-es','contact-es'];
   if (id === 'home' || id === 'home-es') {
     footer.classList.remove('visible');
+    document.body.style.background = '#14120c';
   } else {
     footer.classList.add('visible');
+    document.body.style.background = '#f5f2ec';
+    el.style.background = '#f5f2ec';
+    el.style.color = '#14120c';
   }
-  document.getElementById(id).scrollTop = 0;
+  el.scrollTop = 0;
 }
 
 function showLangPage(id) { show(id); }
