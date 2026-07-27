@@ -25,7 +25,7 @@ html,body{height:100%;overflow:hidden;font-family:'Archivo',sans-serif}
 .foot-val{font-size:0.7rem;font-weight:300;color:rgba(245,242,236,0.58)}
 .foot-right{font-size:0.48rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,242,236,0.32);text-align:right;line-height:2.4}
 .foot-right a{color:rgba(245,242,236,0.32);text-decoration:none}
-.light-page{position:fixed;inset:0;background:#f5f2ec;color:#14120c;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}
+.light-page{position:fixed;inset:0;background:#f5f2ec;color:#14120c;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;display:none}
 .light-page.active{display:block}
 #site-footer{position:fixed;bottom:0;left:0;right:0;z-index:100;background:#f5f2ec;border-top:1px solid rgba(24,22,15,0.08);display:none}
 #site-footer.visible{display:block}
@@ -45,7 +45,7 @@ html,body{height:100%;overflow:hidden;font-family:'Archivo',sans-serif}
 }
 
 @media(max-width:768px){
-  #site-footer > div:first-child{padding:0.75rem 1.25rem !important;flex-wrap:wrap;gap:0.5rem}
+  #site-footer > div:first-child{padding:0.75rem 1.25rem !important;flex-direction:column;gap:0.5rem;align-items:flex-start}
   #site-footer > div:last-child{padding:0.5rem 1.25rem !important;font-size:0.38rem !important}
   #site-footer img{width:28px !important}
 }
@@ -219,7 +219,7 @@ html,body{height:100%;overflow:hidden;font-family:'Archivo',sans-serif}
         <div style="font-size:0.78rem;font-weight:300;color:#9a9690;line-height:1.7">Coverage of Pras Michel case; Denaro involvement in federal matter.</div>
       </div>
       <div style="display:none;padding:1.5rem 0;border-bottom:1px solid rgba(24,22,15,0.08)">
-        <div style="font-size:0.56rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9a9690;margin-bottom:0.4rem">Alexander Street <span style="font-size:0.42rem;color:#c8c2b4;letter-spacing:0.15em;text-transform:uppercase"> · Video</span></div>
+        <div style="font-size:0.56rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9a9690;margin-bottom:0.4rem">60 Minutes <span style="font-size:0.42rem;color:#c8c2b4;letter-spacing:0.15em;text-transform:uppercase"> · Video</span></div>
         <a href="https://video.alexanderstreet.com/watch/the-super-cartel" target="_blank" rel="noopener" style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:#14120c;text-decoration:none;display:block;line-height:1.4;margin-bottom:0.35rem">The Super Cartel — Documentary</a>
         <div style="font-size:0.78rem;font-weight:300;color:#9a9690;line-height:1.7">Documentary on major international narcotics prosecution involving Denaro.</div>
       </div>
@@ -267,6 +267,11 @@ html,body{height:100%;overflow:hidden;font-family:'Archivo',sans-serif}
         <div style="font-size:0.56rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9a9690;margin-bottom:0.4rem">The New York Times</div>
         <a href="https://www.nytimes.com/1990/05/09/nyregion/ins-agent-accused-of-selling-green-cards-to-drug-dealers.html" target="_blank" rel="noopener" style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:#14120c;text-decoration:none;display:block;line-height:1.4;margin-bottom:0.35rem">INS Agent Accused of Selling Green Cards to Drug Dealers</a>
         <div style="font-size:0.78rem;font-weight:300;color:#9a9690;line-height:1.7">Early federal case coverage involving Denaro in complex narcotics matter.</div>
+      </div>
+      <div style="display:none;padding:1.5rem 0;border-bottom:1px solid rgba(24,22,15,0.08)">
+        <div style="font-size:0.56rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:#9a9690;margin-bottom:0.4rem">La Prensa Honduras</div>
+        <a href="https://www.laprensa.hn/honduras/alias-volantillo-condena-narcotrafico-justicia-eeuu-LH27576973" target="_blank" rel="noopener" style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:400;color:#14120c;text-decoration:none;display:block;line-height:1.4;margin-bottom:0.35rem">Alias "Volantillo" Condenado por Narcotráfico ante la Justicia de EE.UU.</a>
+        <div style="font-size:0.78rem;font-weight:300;color:#9a9690;line-height:1.7">Honduran press coverage of the Walther Ramos Rivera narcotics sentencing; Denaro involved in related proceedings.</div>
       </div>
     </div>
     <button onclick="togglePress()" id="press-btn" style="margin-top:2.5rem;font-size:0.58rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#9a9690;cursor:pointer;background:none;border:none;padding:0;display:flex;align-items:center;gap:0.75rem"><span style="display:block;width:2rem;height:1px;background:#c8c2b4"></span>View More</button>
