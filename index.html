@@ -289,7 +289,7 @@ html,body{height:100%;overflow:hidden;font-family:'Archivo',sans-serif}
   <div class="contact-pad" style="max-width:500px;padding:8rem 0 10rem;margin:0 auto">
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:400;font-style:normal;color:#14120c;margin-bottom:2rem">Get in touch.</h2>
     <div style="font-size:0.56rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:#9a9690;margin-bottom:3rem">All inquiries handled in strict confidence</div>
-    <form action="https://formspree.io/f/xlgqeolk" method="POST" onsubmit="handleSubmit(event)">
+    <form action="https://formspree.io/f/xbdnqnjw" method="POST" onsubmit="handleSubmit(event)">
       <input type="hidden" name="_subject" value="New inquiry — Joel Denaro, P.A.">
       <div style="margin-bottom:1.75rem"><label style="font-size:0.52rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:#9a9690;display:block;margin-bottom:0.5rem">Name</label><input type="text" name="name" placeholder="Your full name" required style="width:100%;background:transparent;border:none;border-bottom:1px solid #c8c2b4;color:#14120c;padding:0.6rem 0;font-family:'Archivo',sans-serif;font-size:0.88rem;outline:none"></div>
       <div style="margin-bottom:1.75rem"><label style="font-size:0.52rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:#9a9690;display:block;margin-bottom:0.5rem">Phone</label><input type="tel" name="phone" placeholder="(305) 000-0000" style="width:100%;background:transparent;border:none;border-bottom:1px solid #c8c2b4;color:#14120c;padding:0.6rem 0;font-family:'Archivo',sans-serif;font-size:0.88rem;outline:none"></div>
@@ -483,7 +483,7 @@ html,body{height:100%;overflow:hidden;font-family:'Archivo',sans-serif}
   <div class="contact-pad" style="max-width:500px;padding:8rem 0 10rem;margin:0 auto">
     <h2 style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:400;font-style:normal;color:#14120c;margin-bottom:2rem">Contáctenos.</h2>
     <div style="font-size:0.56rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:#9a9690;margin-bottom:3rem">Toda consulta se maneja con estricta confidencialidad</div>
-    <form action="https://formspree.io/f/xlgqeolk" method="POST" onsubmit="handleSubmitEs(event)">
+    <form action="https://formspree.io/f/xbdnqnjw" method="POST" onsubmit="handleSubmitEs(event)">
       <input type="hidden" name="_subject" value="Nueva consulta — Joel Denaro, P.A.">
       <div style="margin-bottom:1.75rem"><label style="font-size:0.52rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:#9a9690;display:block;margin-bottom:0.5rem">Nombre</label><input type="text" name="name" placeholder="Su nombre completo" required style="width:100%;background:transparent;border:none;border-bottom:1px solid #c8c2b4;color:#14120c;padding:0.6rem 0;font-family:'Archivo',sans-serif;font-size:0.88rem;outline:none"></div>
       <div style="margin-bottom:1.75rem"><label style="font-size:0.52rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:#9a9690;display:block;margin-bottom:0.5rem">Teléfono</label><input type="tel" name="phone" placeholder="(305) 000-0000" style="width:100%;background:transparent;border:none;border-bottom:1px solid #c8c2b4;color:#14120c;padding:0.6rem 0;font-family:'Archivo',sans-serif;font-size:0.88rem;outline:none"></div>
@@ -566,7 +566,7 @@ async function handleSubmit(e) {
   var btn = e.target.querySelector('button[type=submit]');
   btn.textContent = 'Sending...'; btn.disabled = true;
   try {
-    var res = await fetch('https://formspree.io/f/xlgqeolk', {method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}});
+    var res = await fetch('https://formspree.io/f/xbdnqnjw', {method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}});
     if (res.ok) { e.target.reset(); document.getElementById('form-success').style.display='block'; btn.textContent='Sent'; }
     else { btn.textContent='Send'; btn.disabled=false; }
   } catch(err) { btn.textContent='Send'; btn.disabled=false; }
@@ -577,7 +577,7 @@ async function handleSubmitEs(e) {
   var btn = e.target.querySelector('button[type=submit]');
   btn.textContent = 'Enviando...'; btn.disabled = true;
   try {
-    var res = await fetch('https://formspree.io/f/xlgqeolk', {method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}});
+    var res = await fetch('https://formspree.io/f/xbdnqnjw', {method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}});
     if (res.ok) { e.target.reset(); document.getElementById('form-success-es').style.display='block'; btn.textContent='Enviado'; }
     else { btn.textContent='Enviar'; btn.disabled=false; }
   } catch(err) { btn.textContent='Enviar'; btn.disabled=false; }
