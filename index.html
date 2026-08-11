@@ -20,7 +20,7 @@ html,body{height:100%;overflow:hidden;font-family:'Archivo',sans-serif}
 .home-name{font-family:'Playfair Display',serif;font-size:clamp(3.8rem,8vw,8.5rem);font-weight:400;font-style:normal;line-height:0.9;letter-spacing:-0.01em;color:#f5f2ec;margin-bottom:1.5rem}
 .home-sub{font-size:0.56rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:rgba(245,242,236,0.5);margin-bottom:2rem}
 .home-rule{width:100%;height:1px;background:rgba(245,242,236,0.12);margin-bottom:1.75rem}
-.home-foot{display:flex;justify-content:space-between;align-items:flex-end}
+.home-foot{display:flex;flex-direction:row;justify-content:space-between;align-items:flex-end}
 .foot-lbl{font-size:0.46rem;font-weight:500;letter-spacing:0.32em;text-transform:uppercase;color:rgba(245,242,236,0.6);margin-bottom:0.3rem}
 .foot-val{font-size:0.7rem;font-weight:300;color:rgba(245,242,236,0.9)}
 .foot-right{font-size:0.48rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:rgba(245,242,236,0.75);text-align:right;line-height:2.4}
@@ -30,18 +30,12 @@ html,body{height:100%;overflow:hidden;font-family:'Archivo',sans-serif}
 #site-footer{position:fixed;bottom:0;left:0;right:0;z-index:100;background:#f5f2ec;border-top:1px solid rgba(24,22,15,0.08);display:none}
 #site-footer.visible{display:block}
 @media(max-width:768px){
-  nav{padding:1rem 1.25rem !important}
-  nav>a>span:first-child{font-size:0.85rem !important}
-  nav>a>span:last-child{display:block !important;font-size:0.36rem !important;letter-spacing:0.18em !important}
-  nav>div{gap:1rem !important}
-  nav>div>a{font-size:0.48rem !important;letter-spacing:0.14em !important}
-  .home-content{padding:5.5rem 1.5rem 2.5rem !important}
-  .home-name{font-size:clamp(2.8rem,11vw,4.5rem) !important;margin-bottom:1.5rem !important}
-  .home-sub{font-size:0.44rem !important;margin-bottom:1.25rem !important}
-  .home-foot{flex-direction:column !important;gap:0.75rem !important}
-  .home-eyebrow{font-size:0.46rem !important;letter-spacing:0.28em !important}
-  .about-pad,.press-pad,.contact-pad{padding:1rem 1.5rem 80px !important}
-  .about-photo-f{width:120px !important;height:160px !important;margin:0 0 1.5rem 1.5rem !important}
+  .home-foot{display:flex !important;flex-direction:row !important;justify-content:space-between !important;align-items:flex-end !important;gap:0 !important;width:100% !important;padding:0 !important}
+  .home-foot > div:first-child{flex:1 !important;display:flex !important;flex-direction:column !important;gap:0.75rem !important}
+  .foot-lbl{font-size:0.36rem !important}
+  .foot-val{font-size:0.55rem !important}
+  .foot-right{flex-shrink:0 !important;font-size:0.34rem !important;line-height:1.9 !important;text-align:right !important}
+  .foot-right img{width:26px !important}
 }
 
 @media(max-width:768px){
@@ -80,8 +74,12 @@ html,body{height:100%;overflow:hidden;font-family:'Archivo',sans-serif}
 }
 
 @media(max-width:768px){
-  .home-foot > div:first-child{display:grid !important;grid-template-columns:1fr 1fr;gap:1rem !important}
-  .home-foot{align-items:flex-start !important}
+  .home-foot{display:flex !important;flex-direction:row !important;justify-content:space-between !important;align-items:flex-end !important;gap:0.5rem !important}
+  .home-foot > div:first-child{display:flex !important;flex-wrap:wrap !important;gap:0.5rem 1.5rem !important}
+  .foot-lbl{font-size:0.38rem !important}
+  .foot-val{font-size:0.58rem !important}
+  .foot-right{font-size:0.36rem !important;line-height:1.9 !important;text-align:right !important}
+  .foot-right img{width:28px !important}
 }
 </style>
 </head>
